@@ -126,19 +126,19 @@ if predict_btn:
     else:
         status_color, bar_color = "#27ae60", "#2ecc71" # Vert
 
-    # Layout des résultats
+  
     col1, col2 = st.columns([1, 1.5])
 
-    # --- COLONNE 1 : VISUALISATION PROFESSIONNELLE ---
+   
     with col1:
-        # Début de la carte HTML
+        
         st.markdown('<div class="result-card">', unsafe_allow_html=True)
         st.write("### ⚖️ Score de Risque")
         
-        # 1. Utilisation de st.metric (Natif, Pro)
+
         st.metric(label="Probabilité de désabonnement", value=f"{risk_percentage:.1f}%")
         
-        # 2. Barre de progression CSS fine et épurée (Remplace la jauge)
+        # 2. Barre de progression CSS fine et épurée 
         st.markdown(f"""
             <div style="background-color: #e0e0e0; border-radius: 10px; width: 100%; height: 8px; margin-top: 10px;">
                 <div style="background-color: {bar_color}; width: {risk_percentage}%; height: 100%; border-radius: 10px; transition: width 0.5s ease-in-out;"></div>
@@ -148,7 +148,7 @@ if predict_btn:
             </p>
             """, unsafe_allow_html=True)
         
-        # Fin de la carte HTML
+        
         st.markdown('</div>', unsafe_allow_html=True)
 
     # --- COLONNE 2 : DIAGNOSTIC ---
@@ -159,7 +159,7 @@ if predict_btn:
             st.error("**ALERTE : Score de churn élevé .**")
             st.subheader("🎯 Actions Prescriptives :")
             
-            # Utilisation de expander pour ne pas encombrer visuellement
+            
             with st.expander("Voir les recommandations détaillées", expanded=True):
                 if input_df['Contract'].iloc[0] == "Month-to-month":
                     st.write("👉 **Fidélisation :** Le client est sans engagement. Proposez une conversion vers un contrat annuel avec une remise de 15% pour sécuriser le revenu.")
@@ -179,4 +179,5 @@ if predict_btn:
         else:
             st.success("**CONFIRMATION : Profil client stable.**")
             st.subheader(" Stratégie de Croissance :")
+
             st.write("Le client est satisfait. Invitez-le à parrainer un nouveau client ou à laisser un avis positif.")
