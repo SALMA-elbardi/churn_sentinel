@@ -1,22 +1,22 @@
 # 🛡️ Churn Sentinel : Intelligence Artificielle & Stratégie de Rétention
 
-![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://churnsentinel-5brcltpyvzpoz9gwpaf2kr.streamlit.app/)
 
-## 📌 Aperçu du Projet
+##  Aperçu du Projet
 Ce projet déploie un système d'aide à la décision pour prédire le désabonnement des clients (Churn) dans le secteur des télécommunications. L'objectif est de passer d'une simple analyse prédictive à une **analyse prescriptive**, en suggérant des actions concrètes pour chaque profil client identifié comme "à risque".
 
-## 🚀 Fonctionnalités Clés
+##  Fonctionnalités Clés
 - **Tableau de Bord Interactif :** Interface développée avec Streamlit pour une utilisation métier intuitive.
 - **Analyse Prescriptive :** Génération de recommandations commerciales basées sur les données.
 - **Interprétabilité (XAI) :** Utilisation des valeurs SHAP pour expliquer les décisions du modèle.
 - **Performance Robuste :** Modèle optimisé pour maximiser le **Recall (0.79)**, assurant la détection de la majorité des clients sur le départ.
 
-## 🧠 Architecture Technique
+##  Architecture Technique
 - **Preprocessing :** Pipeline de nettoyage, encodage catégoriel et normalisation .
 - **Modélisation :** Benchmark comparatif entre Régression Logistique (équilibrée), Random Forest, XGBoost et Réseaux de Neurones .
 - **Validation :** Stratified K-Fold Cross-Validation pour garantir la stabilité des résultats.
 
-## 📊 Performance du Modèle Final
+##  Performance du Modèle Final
 | Métrique | Score |
 | :--- | :--- |
 | **Recall (Classe 1)** | **0.79** |
@@ -29,4 +29,5 @@ Ce projet déploie un système d'aide à la décision pour prédire le désabonn
 3. `streamlit run app.py`
 
 ---
+
  *Projet réalisé par Salma el bardi - Étudiante en Ingénierie de Science des Données & IA*
